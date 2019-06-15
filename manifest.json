@@ -1,19 +1,19 @@
 {
-  "manifest_version": 2,
-  "name": "Job Ninja",
-  "version": "0.1",
-  "background": {
-    "scripts": ["background.js"]
-  },
-  "content_scripts": [
-    {
-      "matches": [
-        "<all_urls>"
-      ],
-      "js": ["jquery-3.4.0.min.js", "content.js"]
-    }
-  ],
-  "browser_action": {
-    "default_icon": "images/get_started16.png"
-  }
+    "manifest_version": 2,
+    "name": "Job Ninja",
+    "description": "Find a job",
+    "version": "0.2",
+    "background": {
+        "scripts": ["event.js"],
+        "persistent": false
+    },
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "tabs",
+        "http://*/*",
+        "https://*/*"
+    ]
 }

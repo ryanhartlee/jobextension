@@ -20,7 +20,24 @@
         content:" ";
         display:inline-block;
         width:12px;
-}
+      }
+      .jobResultLine {
+        border-style: solid;
+        border-width: 1px;
+        padding: 5px;
+      }
+      img {
+        width: 20%;
+        height: auto;
+        float: right;
+      }
+      #jn {
+        font-family: Trebuchet MS;
+        font-size: 72px;
+      }
+      .postingLink {
+        text-align: right;
+      }
     </style>
     <link
       rel="stylesheet"
@@ -31,15 +48,13 @@
     <script src="popup.js"></script>
   </head>
   <body class="container">
-    <h1>Job Ninja</h1>
-    <div class="container row" id="companyInfo">
-      <h3>Company: </h3><span> </span>
-      <h3 id="companyName"> </h3>
-    </div>
+    <img src='icon.png'>
+    <h1 id="jn">Job Ninja</h1>
+
 
     <div id="results">
       <h4>Jobs we could find:</h4>
-      <div id="resultTarget"></div>
+      <div id="resultTarget" class="container"></div>
     </div>
 
   </body>

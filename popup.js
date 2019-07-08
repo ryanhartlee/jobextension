@@ -1,5 +1,5 @@
 const authenticJobsAPIKey = "84d108dcaeb8e00c51cc4ae1be33268d";
-let company = "nothing";
+let company = "Cannot Pull Site Info";
 
 let results = [];
 
@@ -23,13 +23,13 @@ let authJobs = function() {
           // results = JSON.stringify(data.listings.listing);
           for (let i = 0; i < 10; i++) {
             document.getElementById("resultTarget").innerHTML +=
-              "<div class='jobResultLine' id='job'" +
+              "<div class='jobResultLine row' id='job " +
               i +
-              "><h5>" +
+              "'><h5>" +
               data.listings.listing[i].title +
-              "</h5><a href=" +
+              "</h5><span> </span><a class='postingLink' href=" +
               data.listings.listing[i].url +
-              " target='_blank'>Link</a></div><br>";
+              " target='_blank'>Go to Listing</a></div><br>";
           }
         }
         // alert(results)
@@ -43,9 +43,9 @@ function onPageDetailsReceived(pageDetails) {
   site = site.replace("http://", "");
   site = site.replace("www.", "");
   site = site.substring(0, site.indexOf(".com"));
-
   company = site;
-  document.getElementById("companyName").innerHTML = company;
+
+  // document.getElementById("companyName").innerHTML = company;
   authJobs();
 }
 

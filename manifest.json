@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "Job Ninja",
     "description": "Find a job based on the site you're on.",
-    "version": "0.2",
+    "version": "0.3",
     "background": {
         "scripts": ["event.js"],
         "persistent": false
@@ -12,7 +12,7 @@
         "default_popup": "popup.html"
     },
     "permissions": [
-        "tabs",
+        "activeTab",
         "http://*/*",
         "https://*/*"
     ]
